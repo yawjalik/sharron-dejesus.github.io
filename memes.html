@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var links = [
+                "https://preview.redd.it/s2y08clghay31.png?width=640&crop=smart&auto=webp&s=c72978f2426f38357772f04aa441646f4cefc627",
+                "https://i.redd.it/ta6ybhknib821.jpg",
+                "https://popculturalstudies.files.wordpress.com/2019/12/tpm-3.jpg?w=418&h=418",
+                "https://preview.redd.it/bchi485892d61.jpg?width=640&crop=smart&auto=webp&s=7dff18dd8f69f23abca70ebc73f0d158c5d64ce4",
+                "https://preview.redd.it/70zdjiilli351.jpg?width=640&crop=smart&auto=webp&s=0d49790c96f28fd1436d39eaf6b6c9502fbf40ff",
+                "https://i.redd.it/copl7w5truc31.jpg",
+                "https://pbs.twimg.com/media/EWy2bgzU0AAYain.png",
+                "https://preview.redd.it/hhcr0nwdppb41.jpg?width=640&crop=smart&auto=webp&s=6bc2c28ab1c4caea82a8327691d48387e593850a",
+                "https://preview.redd.it/mm83skeg01151.jpg?width=640&crop=smart&auto=webp&s=c5f5c4ceaa01776442dab8cdb76d74a866c982fe",
+                "https://i.redd.it/nqt0ohw4avi41.jpg",
+                "https://preview.redd.it/tl5mayg8byn41.jpg?width=640&crop=smart&auto=webp&s=a34b3bf89ef7f717baadc0841915245353c97a8b",
+                "https://i.redd.it/velzvs0f3t641.png",
+                "https://i.redd.it/7ajpdzgoiqe51.jpg",
+                "https://preview.redd.it/72uxqev6hgh41.jpg?width=640&crop=smart&auto=webp&s=ae4837ea828a108df6d41b62e57feae1cc26c3ae",
+                "https://preview.redd.it/ajy9e0aws6161.jpg?width=640&crop=smart&auto=webp&s=b4bee2196ae436e474143f80712a3226189127cf",
+                "https://preview.redd.it/rmnwwyxp11a61.jpg?width=640&crop=smart&auto=webp&s=17d8b5eada9ff2f0b2441f3393c5460ffd6b0679",
+                "https://preview.redd.it/dj3jpbp0k0p41.jpg?width=640&crop=smart&auto=webp&s=d8dfebade9b41fbaaafd8d681e615c257be07261",
+                "https://preview.redd.it/9o5ff7cwy0f31.png?width=640&crop=smart&auto=webp&s=9032f96752136b07c43f91697e49ba8819c3986a",
+                "https://preview.redd.it/k265jusf4nb61.png?width=640&crop=smart&auto=webp&s=68c58ae99f3170c35ad7f2e6bae55bd23de2dd1b",
+                "https://preview.redd.it/rje6z3b53br51.jpg?width=640&crop=smart&auto=webp&s=9234e8eeb0c341e358e8afaebdebe5b72d5fdb9b",
+                "https://preview.redd.it/ld83f5v8ewt51.jpg?width=640&crop=smart&auto=webp&s=8c069e40779d469a3dd461210e1615196164dc15"];
+            // Lmao yes i hardcoded the links
+            var indices = [];
+            var index;
+            var i;
+
+            function random_meme(){
+                if (indices.length == 0){
+                    while (indices.length < links.length){
+                        index = Math.floor(Math.random() * links.length);
+                        if (!indices.includes(index)) {
+                            indices.push(index);
+                        }
+                    }
+                }
+                i = indices[0];
+                document.getElementById("memez").src=links[i];
+                indices.shift(index);
+            }
+        </script>
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <header>
+            <!-- navbar references: https://getbootstrap.com/docs/4.5/components/navbar/
+            https://www.codeply.com/go/jk6KogFo8H/bootstrap-dead-center-navbar-on-desktop-only-->
+            <nav class="navbar navbar-light navbar-expand-lg bg-light sticky-top">
+                <a href="index.html" class="navbar-brand w-25">Jalik Yaw</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse w-100" id="mainNav">
+                    <ul class="navbar-nav w-100 justify-content-center text-nowrap" id="navElements">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About Me</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Stuff I Like</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="memes.html">Memes</a>
+                                <a class="dropdown-item" href="music.html">Music I Like</a>
+                                <a class="dropdown-item" href="anime.html">My Favorite Anime</a>
+                                <a class="dropdown-item" href="https://youtu.be/dQw4w9WgXcQ" target="_blank">You :3</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-25 d-none d-lg-block"><!--empty spacer--></div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <h3>Meme Generator..?</h3>
+                <div class="container">
+                    <img id="memez" src="memgen.PNG"/>
+                </div>
+                <button class="btn btn-danger btn-lg" onclick="random_meme()">YEEEHAW</button>
+
+            </div>
+            <small>Most credits go to r/sciencememes and r/prequelmemes!</small>
+        </main>
+
+    </body>
+</html>

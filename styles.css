@@ -1,0 +1,61 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+	background-image: url('background.jpg');
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+li{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+main {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+
+.container {
+	/*border: 2px solid red;*/
+	width: 95%;
+	max-width: 735px;
+	margin-top: 3em;
+}
+
+.columns {
+	/*border: 2px solid magenta;*/
+	align-items: center;
+	justify-content: center;
+}
+
+.buttons {
+	margin-top: 1em;
+}
+
+#cat {
+	border-radius: 50%;
+	width: 40%;
+	margin: 1em;
+}
+
+#about {
+	margin: 1em;
+	text-align: left;
+}
+
+#memez {
+	width: 95%;
+}
+

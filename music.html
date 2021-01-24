@@ -7,8 +7,30 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <link href="styles.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var links = ["https://www.youtube.com/embed/DdIRKLDjuUc",
+            "https://www.youtube.com/embed/V5I2TDIhiAA",
+            "https://www.youtube.com/embed/lCPwR7R4hlA",
+            "https://www.youtube.com/embed/zqNTltOGh5c",
+            "https://www.youtube.com/embed/PzaW0E7uRwc",
+            "https://www.youtube.com/embed/qvsMabbX_Bw",
+            "https://www.youtube.com/embed/yfrt1sRAI2M",
+            "https://www.youtube.com/embed/A7AhNiyj_EQ",
+            "https://www.youtube.com/embed/D0i23wZ0IeE",
+            "https://www.youtube.com/embed/ZGM90Bo3zH0",
+            "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            "https://www.youtube.com/embed/n2rVnRwW0h8",
+            "https://www.youtube.com/embed/jX8RTjUUcLE",
+            "https://www.youtube.com/embed/oIJuygxblSc",
+            "https://www.youtube.com/embed/AolstL1_MhE"];
 
-        <title>My Webpage</title>
+            window.addEventListener("load", function() {
+                var index = Math.floor(Math.random() * links.length);
+                document.getElementById("video").src=links[index];
+            });
+
+        </script>
+        <title>Jalik Yaw - Music</title>
     </head>
     <body>
         <header>
@@ -46,14 +68,18 @@
 
         <main>
             <div class="container">
-                <h3>Title Here</h3>
+                <h3>Music Stuff!</h3>
                 <div id="about">
                     <p>
-                        Lorem ipsom. This page is under construkshun
+                        I like listening and playing music. I play drums
+                        (and also other instruments but I'm way too dumb to play them properly).
+                        My music tastes change from time to time, but I generally like
+                        jazz,  l o f i  beats, and metalcore. Some of the bands I'm current listening to
+                        are Oceans Ate Alaska, Northlane, Veil of Maya, and Crystal Lake. I've made a random
+                        generator below that picks of some of my favourite tracks I've hardcoded in.
                     </p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tZnm9kGsa9g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-
             </div>
         </main>
 
